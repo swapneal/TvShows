@@ -1,1 +1,13 @@
-<p>show-details works!</p>
+<div>
+  <div>
+    <span>{{currentShow.showName}}, {{currentShow.network}}</span>
+  </div>
+  <div>
+    <img [src]="currentShow.img" />
+    <span>{{currentShow.showGenre}}</span>
+  </div>
+  <div>
+    {{currentShow.showSummary}}
+    {{currentShow.showCountry}}
+  </div>
+</div>

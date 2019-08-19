@@ -11,14 +11,14 @@ export class ShowDetailsComponent implements OnInit {
   currentShow: ICurrentShow;
   constructor() {
     this.currentShow = {
-      showName: "",
-      showGenre: "",
-      network: "",
-      airedTime: "",
-      showImage: "",
-      showSummary: "",
+      showName: "SHowName",
+      showGenre: "genre",
+      network: "network",
+      airedTime: "atime",
+      showImage: "image",
+      showSummary: "sum",
       showRuntime: 0,
-      showCountry: ""
+      showCountry: "country"
     };
   }
 
