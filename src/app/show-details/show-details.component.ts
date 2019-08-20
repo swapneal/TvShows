@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ICurrentShow } from "../icurrent-show";
-import {ShowService} from '../shows/shows.service';
+import { ShowsService } from '../shows/shows.service';
+
 @Component({
   selector: "app-show-details",
   templateUrl: "./show-details.component.html",
@@ -8,11 +9,11 @@ import {ShowService} from '../shows/shows.service';
 })
 export class ShowDetailsComponent implements OnInit {
   currentShow: ICurrentShow;
-  constructor() {
-    
+  constructor(private showsService: ShowsService) {
+
   }
 
   ngOnInit() {
-    this.showService("girls").subscribe(data => (this.currentShow = data));
+    this.showsService.getShowData("girls").subscribe(data => (this.currentShow = data));
   }
 }
