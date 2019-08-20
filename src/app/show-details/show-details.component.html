@@ -1,13 +1,20 @@
 <div>
   <div>
-    <span>{{currentShow.showName}}, {{currentShow.network}}</span>
+    Show Name: {{currentShow.showName}}
+    Channel :  {{currentShow.showNetwork}}
   </div>
   <div>
-    <img [src]="currentShow.img" />
-    <span>{{currentShow.showGenre}}</span>
+    <img [src]="currentShow.showImage" />
+
   </div>
   <div>
+    <span>{{currentShow.showDate}}</span>
     {{currentShow.showSummary}}
-    {{currentShow.showCountry}}
+    {{currentShow.showTime}}
+    {{currentShow.showDuration}}
+  </div>
+  <div>
+        {{currentShow.showCountry}}
+        {{currentShow.showGenres}}
   </div>
 </div>
