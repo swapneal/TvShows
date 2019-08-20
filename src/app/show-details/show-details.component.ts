@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ICurrentShow } from "../icurrent-show";
-
+import {ShowService} from '../shows/shows.service';
 @Component({
   selector: "app-show-details",
   templateUrl: "./show-details.component.html",
@@ -12,5 +12,7 @@ export class ShowDetailsComponent implements OnInit {
     
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.showService("girls").subscribe(data => (this.currentShow = data));
+  }
 }
