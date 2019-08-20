@@ -6,20 +6,10 @@ import { ICurrentShow } from "../icurrent-show";
   templateUrl: "./show-details.component.html",
   styleUrls: ["./show-details.component.css"]
 })
-
 export class ShowDetailsComponent implements OnInit {
   currentShow: ICurrentShow;
   constructor() {
-    this.currentShow = {
-      showName: "",
-      showGenre: "",
-      network: "",
-      airedTime: "",
-      showImage: "",
-      showSummary: "",
-      showRuntime: 0,
-      showCountry: ""
-    };
+    
   }
 
   ngOnInit() {}
