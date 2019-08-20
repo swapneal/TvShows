@@ -1,6 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { ICurrentShow } from "../icurrent-show";
+<<<<<<< HEAD
 import { ShowsService } from '../shows/shows.service';
+=======
+>>>>>>> 0c857948b43d41ef2220a0187bdb3fcaaa53c448
 
 @Component({
   selector: "app-show-details",
