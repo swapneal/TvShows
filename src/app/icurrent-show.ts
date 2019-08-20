@@ -1,10 +1,11 @@
 export interface ICurrentShow {
-  showName: string;
-  showGenre: string;
-  network: string;
-  airedTime: string;
-  showImage: string;
-  showSummary: string;
-  showRuntime: number;
-  showCountry: string;
+showName: string
+showTime: string
+showDate: string
+showNetwork: string
+showDuration: string
+showSummary: string
+showImage: string
+showCountry:string
+showGenres:string
 }

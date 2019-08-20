@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ICurrentShow } from "../icurrent-show";
+import { ShowsService } from '../shows/shows.service';
 
 @Component({
   selector: "app-show-details",
@@ -8,19 +9,12 @@ import { ICurrentShow } from "../icurrent-show";
 })
 
 export class ShowDetailsComponent implements OnInit {
-  currentShow: ICurrentShow;
-  constructor() {
-    this.currentShow = {
-      showName: "SHowName",
-      showGenre: "genre",
-      network: "network",
-      airedTime: "atime",
-      showImage: "image",
-      showSummary: "sum",
-      showRuntime: 0,
-      showCountry: "country"
-    };
+  currentShow: ICurrentShow
+  constructor(private showsService: ShowsService) {
+
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.showsService.getShowData('girls').subscribe(data => this.currentShow = data);
+  }
 }
