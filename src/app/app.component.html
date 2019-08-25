@@ -1,10 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
- 
+  <mat-toolbar color="primary">
+    <span>Welcome to {{ title }}!</span>
+  </mat-toolbar>
+  <div>
+    <app-show-search></app-show-search>
+  </div>
 </div>
-
-<app-show-details></app-show-details>
+<mat-card>
+  <app-show-details style="text-align:center"></app-show-details>
+</mat-card>
 <router-outlet></router-outlet>

@@ -1,1 +1,20 @@
-<p>show-details works!</p>
+<div>
+  <div>
+    Show Name: {{currentShow.showName}}
+    Channel :  {{currentShow.showNetwork}}
+  </div>
+  <div>
+    <img [src]="currentShow.showImage" />
+
+  </div>
+  <div>
+    <span>{{currentShow.showDate}}</span>
+    {{currentShow.showSummary}}
+    {{currentShow.showTime}}
+    {{currentShow.showDuration}}
+  </div>
+  <div>
+        {{currentShow.showCountry}}
+        {{currentShow.showGenres}}
+  </div>
+</div>
