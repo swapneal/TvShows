@@ -1,7 +1,7 @@
-import { Component, Output, OnInit } from '@angular/core';
+import { Component, Output, OnInit, EventEmitter } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { debounceTime } from 'rxjs/operators';
-import { EventEmitter } from 'events';
+
 
 @Component({
   selector: 'app-show-search',
@@ -9,7 +9,7 @@ import { EventEmitter } from 'events';
   styleUrls: ['./show-search.component.css']
 })
 export class ShowSearchComponent implements OnInit {
-  @Output() searchEvent= new EventEmitter();
+  @Output() searchEvent= new EventEmitter<string>();
 
   search = new FormControl('',[Validators.minLength(3)]);
 

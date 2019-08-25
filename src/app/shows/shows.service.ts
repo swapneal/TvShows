@@ -39,7 +39,7 @@ export class ShowsService {
 
   constructor(private httpClient:HttpClient) { }
 
-  getShowData(search:string){
+  getShowData(search: string){
     let uriParams = '';
     if (typeof search === 'string'){
       uriParams = `q=${search}`
@@ -50,6 +50,7 @@ export class ShowsService {
     ).pipe(
       map(data => this.transformToICurrentShow(data))
     );
+   
   }
 
   private transformToICurrentShow(data: ICurrentShowData): ICurrentShow {
