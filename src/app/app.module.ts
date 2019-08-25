@@ -7,15 +7,35 @@ import { ShowDetailsComponent } from './show-details/show-details.component';
 import { ShowsService } from './shows/shows.service';
 import { HttpClientModule } from '@angular/common/http';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatToolbarModule, MatIconModule, MatCardModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { ShowSearchComponent } from './show-search/show-search.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    ShowDetailsComponent
+    ShowDetailsComponent,
+    ShowSearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule, 
+    MatToolbarModule,
+    MatIconModule,
+    MatCardModule,
+    FormsModule,
+    ReactiveFormsModule
+
     HttpClientModule
+
   ],
   providers: [ShowsService],
   bootstrap: [AppComponent]
