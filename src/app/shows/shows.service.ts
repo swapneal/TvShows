@@ -60,13 +60,13 @@ export class ShowsService {
       
     showName: data[0].show.name,
     showTime:data[0].show.schedule.time,
-    showDate:data[0].show.schedule.days[0],
+    showDate:data[0].show.schedule.days,
     showNetwork:data[0].show.network.name,
     showDuration:data[0].show.runtime,
     showSummary:data[0].show.summary,
     showImage:data[0].show.image.medium,
     showCountry:data[0].show.network.country.name,
-    showGenres:data[0].show.genres[0]
+    showGenres:data[0].show.genres
     }
 }
 }

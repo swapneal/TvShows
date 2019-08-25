@@ -1,20 +1,45 @@
 <div *ngIf = "currentShow">
   <div>
-    Show Name: {{currentShow.showName}}
-    Channel :  {{currentShow.showNetwork}}
-  </div>
-  <div>
-    <img [src]="currentShow.showImage" />
+      <span>
+        <br>
 
+       <b>Show Name : </b> {{currentShow.showName}}
+        <img [src]="currentShow.showImage" align='right' />
+      </span>
+  </div>
+
+  <div>
+    <br>
+
+    <b>Channel : </b>{{currentShow.showNetwork}}
+  </div>
+
+  <div *ngFor="let date of currentShow.showDate">
+        <div *ngIf = "date">
+          <br>
+          <b>Date : </b>{{date}}
+        </div> 
+  </div>
+  
+  <div>
+  <span ><br><b>Summary : </b></span>
+  <br>
+  <div [innerHTML]="currentShow.showSummary"></div>
+    <div *ngIf = "currentShow.showTime">
+      <b>Show Time : </b>{{currentShow.showTime}}
+    </div>
+  </div>
+
+  <div>
+    <br>
+    <b>Show Duration : </b>{{currentShow.showDuration}} minutes
   </div>
   <div>
-    <span>{{currentShow.showDate}}</span>
-    <div [innerHTML]="currentShow.showSummary"></div>
-    {{currentShow.showTime}}
-    {{currentShow.showDuration}}
+    <br>
+       <b>Show Country : </b> {{currentShow.showCountry}}
   </div>
   <div>
-        {{currentShow.showCountry}}
-        {{currentShow.showGenres}}
+    <br>
+        <b>Show Generes : </b>{{currentShow.showGenres}}
   </div>
 </div>
