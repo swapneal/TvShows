@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { ShowsService } from '../shows/shows.service';
 
 @Component({
@@ -9,14 +9,16 @@ import { ShowsService } from '../shows/shows.service';
 })
 export class ShowSearchComponent implements OnInit {
 
-  search = new FormControl();
+  search = new FormControl('',[Validators.minLength(3)]);
 
   constructor(private showsService: ShowsService) { }
 
   ngOnInit() {
     this.search.valueChanges.subscribe((searchValue: string)=> {
-      const userInput = searchValue;
-      this.showsService.getShowData(userInput.length>1 ? userInput[1]: undefined).subscribe(data=>console.log(data));
+      if(!this.search.invalid) {
+        const userInput = searchValue;
+        this.showsService.getShowData(userInput.length>1 ? userInput[1]: undefined).subscribe(data=>console.log(data));
+      }
     })
   }
 
