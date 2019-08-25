@@ -1,4 +1,4 @@
-<div>
+<div *ngIf = "currentShow">
   <div>
     Show Name: {{currentShow.showName}}
     Channel :  {{currentShow.showNetwork}}
@@ -9,7 +9,7 @@
   </div>
   <div>
     <span>{{currentShow.showDate}}</span>
-    {{currentShow.showSummary}}
+    <div [innerHTML]="currentShow.showSummary"></div>
     {{currentShow.showTime}}
     {{currentShow.showDuration}}
   </div>
