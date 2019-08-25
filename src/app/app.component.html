@@ -4,10 +4,10 @@
     <span>Welcome to {{ title }}!</span>
   </mat-toolbar>
   <div>
-    <app-show-search></app-show-search>
+    <app-show-search (searchEvent)= "doSearch($event)"></app-show-search>
   </div>
 </div>
-<mat-card>
+<mat-card color="primary">
   <app-show-details style="text-align:center"></app-show-details>
 </mat-card>
 <router-outlet></router-outlet>
