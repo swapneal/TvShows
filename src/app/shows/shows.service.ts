@@ -37,8 +37,7 @@ interface ICurrentShowData{
 })
 export class ShowsService {
 
-  constructor(private httpClient:HttpClient) { }
-
+  constructor(private httpClient:HttpClient) { 
   getShowData(search: string){
     let uriParams = '';
     if (typeof search === 'string'){
@@ -51,6 +50,13 @@ export class ShowsService {
       map(data => this.transformToICurrentShow(data))
     );
    
+  getShowData(name:string){
+    return this.httpClient.get<ICurrentShowData>(
+      `${environment.baseURL}api.tvmaze.com/search/shows?q=${name}`
+    ).pipe(
+      map(data => this.transformToICurrentShow(data))
+    );
+
   }
 
   private transformToICurrentShow(data: ICurrentShowData): ICurrentShow {
