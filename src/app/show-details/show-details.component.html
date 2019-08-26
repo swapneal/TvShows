@@ -14,7 +14,7 @@
     <b>Channel : </b>{{currentShow.showNetwork}}
 
   </div>
-<div>
+<div *ngIf = "currentShow.showDate">
   <br>
   <b>Show Days : </b>
   <div *ngFor="let date of currentShow.showDate">
