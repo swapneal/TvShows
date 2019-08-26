@@ -9,7 +9,7 @@ import { ShowsService } from './shows/shows.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'TvShows';
+  title = 'TV Shows Guide';
 
   currentShow: ICurrentShow;
 
@@ -17,9 +17,7 @@ export class AppComponent {
 
   doSearch(searchValue) {
      const userInput = searchValue;
-    // this.showsService.getShowData(userInput.length > 1 ? userInput: undefined).subscribe(data => this.currentShow = data);
     this.showsService.getShowData(userInput).subscribe(data => this.currentShow = data);
-   //console.log("dosearch :  " + this.showService.getShowData(userInput));
   }
 }
 
